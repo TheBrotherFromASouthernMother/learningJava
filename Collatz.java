@@ -1,5 +1,6 @@
 class Equation {
   int n;
+  private static final int DEPARTMENT = 30;
 
   int addNumbers(int a, int b) {
       System.out.println(a + b);
@@ -20,12 +21,22 @@ class Equation {
 }
 
 
+class Console {
+  void log(String input) {
+    System.out.println(input);
+  }
+}
+
+
 
 public class Collatz {
   public static void main(String []args) {
-    System.out.println("Collatz");
+    int thirty = 30;
+    Console console = new Console();
+    console.log("Numbers");
      Equation col = new Equation();
      col.addNumbers(30, 60);
      col.collatzNumber(43);
+     System.out.println(thirty);
   }
 }
