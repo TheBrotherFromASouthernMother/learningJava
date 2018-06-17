@@ -26,5 +26,32 @@ public class UN {
         Object member = EU.members[i];
         System.out.println(member);
     }
+    CopyFile fs = new CopyFile();
+    fs.getFile();
   }
+}
+
+class CopyFile {
+
+  public static void getFile() throws IOException {
+        FileInputStream in = null;
+        FileOutputStream out = null;
+
+        try {
+           in = new FileInputStream("javaIsWeird.txt");
+           out = new FileOutputStream("output.txt");
+
+           int c;
+           while ((c = in.read()) != -1) {
+              out.write(c);
+           }
+        }finally {
+           if (in != null) {
+              in.close();
+           }
+           if (out != null) {
+              out.close();
+           }
+        }
+     }
 }

@@ -1,0 +1,2 @@
+
+This is a txt file that declares how weird of a language Java can be!
