@@ -1,6 +1,7 @@
 import java.io.*;
 
 class Supranational {
+  protected final boolean flag = true;
   String name;
   String region;
   Object[] members;
@@ -19,39 +20,13 @@ public class UN {
     Country Norway = new Country(4000, "Kingdom of Norway", "Norwegian");
     Country Turkey = new Country(4000, "Republic of Turkey", "Turkish");
     peru.printCountry();
-    Supranational EU = new Supranational("European Union", "Europe", new Object[]{Germany, Norway, Turkey});
+    Supranational EU = new Supranational("European Union", "Europe", new String[]{Germany.official_name, Norway.official_name, Turkey.official_name});
     System.out.println(EU.name);
     System.out.println(EU.region);
     for (int i = 0; i < EU.members.length; i ++) {
-        Object member = EU.members[i];
-        System.out.println(member);
+        System.out.println(EU.members[i]);
     }
-    CopyFile fs = new CopyFile();
-    fs.getFile();
+        System.out.println(EU.flag);
+
   }
-}
-
-class CopyFile {
-
-  public static void getFile() throws IOException {
-        FileInputStream in = null;
-        FileOutputStream out = null;
-
-        try {
-           in = new FileInputStream("javaIsWeird.txt");
-           out = new FileOutputStream("output.txt");
-
-           int c;
-           while ((c = in.read()) != -1) {
-              out.write(c);
-           }
-        }finally {
-           if (in != null) {
-              in.close();
-           }
-           if (out != null) {
-              out.close();
-           }
-        }
-     }
 }
