@@ -11,5 +11,6 @@ public class App
     {
         System.out.println( "Hello World!" );
         get("/hello", (req, res) -> "Hello World");
+        get("/", (req, res) -> "NOOOOOO");
     }
 }

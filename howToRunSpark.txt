@@ -1,0 +1,19 @@
+
+
+-Set ups the project directiories
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeA
+rtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+Follow along to:
+https://pconrad-webapps.github.io/topics/sparkjava_getting_started/
+
+
+
+Compile using:
+mvn package
+
+
+
+run using:
+java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
