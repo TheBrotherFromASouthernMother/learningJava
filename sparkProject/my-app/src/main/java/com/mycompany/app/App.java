@@ -11,6 +11,7 @@ public class App {
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
         get("/hello", (req, res) -> "Hello Heroku World");
+        System.out.println('hello')
     }
 
     static int getHerokuAssignedPort() {
